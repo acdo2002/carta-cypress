@@ -7,8 +7,8 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 const testImageName = 'M17_SWex.fits'
 const testRegionName = 'M17_SWex_test_world.crtf'
 
-describe('My First Test', () => {
-    it('Visits the Kitchen Sink', () => {
+describe('Spectral line fitting test:', () => {
+    it('Visits the carta demo server', () => {
       cy.visit('http://carta.asiaa.sinica.edu.tw/frontend/dev/?socketUrl=wss://carta.asiaa.sinica.edu.tw/socketdev')
     // cy.visit('http://localhost:3000/?socketUrl=wss://carta.asiaa.sinica.edu.tw/socketdev')
     })
