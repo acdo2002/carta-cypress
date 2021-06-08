@@ -6,6 +6,10 @@ Initialise submodules and install package dependencies:
 git submodule update --init --recursive
 npm install
 ```
+First time to install cypress on MacOS may require
+```
+./node_modules/.bin/cypress install
+```
 
 ## Opening Cypress
 ```
