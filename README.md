@@ -20,3 +20,7 @@ or
 $(npm bin)/cypress open
 ```
 Then select the *.spec to run.
+e.g. 
+```
+./node_modules/.bin/cypress run --spec "cypress/integration/carta/spectralLineFitting.spec.js"
+```
