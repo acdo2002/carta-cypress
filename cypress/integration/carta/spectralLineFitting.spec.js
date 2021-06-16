@@ -54,29 +54,33 @@ describe('Spectral line fitting test:', () => {
         cy.get('[class="bp3-button dropdown-button"]')
         .eq(1)
         .click()
+        .wait(1000)
         
         //select Region 2
         cy.get('[class="bp3-text-overflow-ellipsis bp3-fill"]')
         .contains('Region 2')
         .click()
+        .wait(1000)
 
         //click spectral line fitting icon
-        cy.get('[data-icon="regression-chart"]').click()
+        cy.get('[data-icon="regression-chart"]').click().wait(1000)
 
         //click auto detect how many component
         cy.get('[data-icon="series-search"]')
         .click()
-        .wait(100)
+        .wait(1000)
 
         //click "w/ conti." toggle
         cy.get('[class="bp3-control bp3-switch"]')
         .eq(2)
         .click()
+        .wait(1000)
 
         //click "auto fit" toggle
         cy.get('[class="bp3-control bp3-switch"]')
         .eq(3)
         .click()
+        .wait(1000)
 
         //click fit button
         cy.get('[class="bp3-button-text"]')
