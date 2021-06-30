@@ -10,13 +10,14 @@ const testRegionName = 'M17_SWex_test_world.crtf'
 describe('Spectral line fitting test:', () => {
     it('Visits the carta demo server', () => {
       cy.visit('http://carta.asiaa.sinica.edu.tw/frontend/dev/?socketUrl=wss://carta.asiaa.sinica.edu.tw/socketdev')
-    // cy.visit('http://localhost:3000/?socketUrl=wss://carta.asiaa.sinica.edu.tw/socketdev')
+      // cy.visit('http://localhost:3000/')
+      cy.wait(500)
     })
 
     it(`Open folder "set_QA"`, () => {
         cy.get('[class="bp3-input"]').type('set_QA')
-        cy.get(`[title="set_QA"]`).click()
-        // cy.get(`[class="cell-text"]`).contains('set_QA').click({ force: true })
+        // cy.get('[title="set_QA"]').click()
+        cy.get(`[class="cell-text"]`).contains('set_QA').click({ force: true })
         cy.wait(500)
     })
 
