@@ -102,7 +102,52 @@ describe('Spectral line fitting test:', () => {
 
         //click Generate
         cy.get('[class="bp3-button-text"]').contains("Generate").click()
+        cy.wait(10000)
     })
 
+    it(`Check the generated moment maps in Image List`,()=>{
+        cy.get('[class="name-cell"]').eq(1)
+        .contains('M17_SWex.fits.moment.integrated')
+
+        cy.get('[class="name-cell"]').eq(2)
+        .contains('M17_SWex.fits.moment.average')
+
+        cy.get('[class="name-cell"]').eq(3)
+        .contains('M17_SWex.fits.moment.weighted_coord')
+
+        cy.get('[class="name-cell"]').eq(4)
+        .contains('M17_SWex.fits.moment.weighted_dispersion_coord')
+
+        cy.get('[class="name-cell"]').eq(5)
+        .contains('M17_SWex.fits.moment.median')
+
+        cy.get('[class="name-cell"]').eq(6)
+        .contains('M17_SWex.fits.moment.standard_deviation')
+
+        cy.get('[class="name-cell"]').eq(7)
+        .contains('M17_SWex.fits.moment.rms')
+
+        cy.get('[class="name-cell"]').eq(8)
+        .contains('M17_SWex.fits.moment.abs_mean_dev')
+
+        cy.get('[class="name-cell"]').eq(9)
+        .contains('M17_SWex.fits.moment.maximum')
+
+        cy.get('[class="name-cell"]').eq(10)
+        .contains('M17_SWex.fits.moment.maximum_coord')
+
+        //cy.get('[class="name-cell"]') only get 10 items
+
+        cy.get('[class="bp3-table-quadrant-scroll-container"]').eq(0)
+        .scrollTo('bottom')
+
+        cy.wait(500)
+
+        cy.get('[class="name-cell"]')
+        .contains('M17_SWex.fits.moment.minimum')
+
+        cy.get('[class="name-cell"]')
+        .contains('M17_SWex.fits.moment.minimum_coord')
+    })
 
 })
