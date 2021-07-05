@@ -66,22 +66,14 @@ describe('Spectral line fitting test:', () => {
         //click spectral line fitting icon
         cy.get('[data-icon="regression-chart"]').click().wait(1000)
 
-        //click auto detect how many component
-        cy.get('[data-icon="series-search"]')
-        .click()
-        .wait(1000)
+        //input the center
+        cy.get('[class="bp3-input"]').eq(14).type("86.7487", { force: true })
 
-        //click "w/ conti." toggle
-        cy.get('[class="bp3-control bp3-switch"]')
-        .eq(2)
-        .click()
-        .wait(1000)
+        //input the amplitude
+        cy.get('[class="bp3-input"]').eq(15).type("0.0043", { force: true })
 
-        //click "auto fit" toggle
-        cy.get('[class="bp3-control bp3-switch"]')
-        .eq(3)
-        .click()
-        .wait(1000)
+        //input the FWHM
+        cy.get('[class="bp3-input"]').eq(16).type("0.0017", { force: true })
 
         //click fit button
         cy.get('[class="bp3-button-text"]')
