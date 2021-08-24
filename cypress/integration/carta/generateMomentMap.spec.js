@@ -9,7 +9,7 @@ const localServer = 'http://localhost:3000/'
 const testRegionName = 'M17_SWex_test_world.crtf'
 
 describe('Generate Moment map for M17_SWex.fits:', () => {
-    it('Visits the carta demo server', () => {
+    it('Visits the carta server(demo/local)', () => {
     //   cy.visit(demoServer)
       cy.viewport(800,600)
       cy.visit(localServer)
@@ -155,7 +155,7 @@ describe('Generate Moment map for M17_SWex.fits:', () => {
 })
 
 describe('Generate Moment map for M17_SWex.image:', () => {
-    it('Visits the carta demo server', () => {
+    it('Visits the carta server(demo/local)', () => {
     //   cy.visit(demoServer)
       cy.viewport(800,600)
       cy.visit(localServer)
@@ -298,7 +298,7 @@ describe('Generate Moment map for M17_SWex.image:', () => {
 })
 
 describe('Generate Moment map for M17_SWex.hdf5:', () => {
-    it('Visits the carta demo server', () => {
+    it('Visits the carta server(demo/local)', () => {
     //   cy.visit(demoServer)
       cy.viewport(800,600)
       cy.visit(localServer)
