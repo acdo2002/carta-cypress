@@ -8,9 +8,9 @@ const testImageName = 'M17_SWex.fits'
 const testRegionName = 'M17_SWex_test_world.crtf'
 
 describe('Spectral line fitting test:', () => {
-    it('Visits the carta demo server', () => {
-      cy.visit('http://carta.asiaa.sinica.edu.tw/frontend/dev/?socketUrl=wss://carta.asiaa.sinica.edu.tw/socketdev')
-      // cy.visit('http://localhost:3000/')
+    it('Visits the carta server(demo/local)', () => {
+      // cy.visit('http://carta.asiaa.sinica.edu.tw/frontend/dev/?socketUrl=wss://carta.asiaa.sinica.edu.tw/socketdev')
+      cy.visit('http://localhost:3000/')
       cy.wait(500)
     })
 
@@ -91,12 +91,12 @@ describe('Spectral line fitting test:', () => {
 
     it(`Match the spectral fitting result`,()=>{
       cy.get('[class="fitting-result-text"]')
-        .contains('86.748651')
+        .contains('86.7486')
 
         cy.get('[class="fitting-result-text"]')
-        .contains('0.004316')
+        .contains('0.0043')
 
         cy.get('[class="fitting-result-text"]')
-        .contains('0.001140')
+        .contains('0.0011')
     })
 })
