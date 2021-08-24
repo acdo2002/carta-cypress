@@ -9,9 +9,10 @@ const localServer = 'http://localhost:3000/'
 const testRegionName = 'M17_SWex_test_world.crtf'
 
 describe('Generate Moment map for M17_SWex.fits:', () => {
-    it('Visits the carta demo server', () => {
-      cy.visit(demoServer)
-    //   cy.visit(localServer)
+    it('Visits the carta server(demo/local)', () => {
+    //   cy.visit(demoServer)
+      cy.viewport(800,600)
+      cy.visit(localServer)
       cy.wait(500)
     })
 
@@ -37,13 +38,13 @@ describe('Generate Moment map for M17_SWex.fits:', () => {
         cy.get('[d="M 0.81609227,1.2562455 V 14.58427 H 3.5600972 V 5.2322526 h 0.037333 L 6.8641032,14.58427 H 9.1227739 L 12.389446,5.1389191 h 0.03733 V 14.58427 h 2.744005 V 1.2562455 H 11.045444 L 8.0961054,10.421595 H 8.058772 L 4.941433,1.2562455 Z"]').click({ force: true })
 
         //set Image
-        cy.get('select').eq(5).select("0: M17_SWex.fits")
+        cy.get('select').eq(9).select("0: M17_SWex.fits")
 
         //set Region: Image
-        cy.get('select').eq(6).select("Image")
+        cy.get('select').eq(10).select("Image")
 
         //set Coordinate: Channel
-        cy.get('select').eq(7).select("Channel")
+        cy.get('select').eq(11).select("Channel")
 
         //set Range
         cy.get('[class="bp3-input"]').eq(9).clear()
@@ -154,9 +155,10 @@ describe('Generate Moment map for M17_SWex.fits:', () => {
 })
 
 describe('Generate Moment map for M17_SWex.image:', () => {
-    it('Visits the carta demo server', () => {
-      cy.visit(demoServer)
-    //   cy.visit(localServer)
+    it('Visits the carta server(demo/local)', () => {
+    //   cy.visit(demoServer)
+      cy.viewport(800,600)
+      cy.visit(localServer)
       cy.wait(500)
     })
 
@@ -179,13 +181,13 @@ describe('Generate Moment map for M17_SWex.image:', () => {
         cy.get('[d="M 0.81609227,1.2562455 V 14.58427 H 3.5600972 V 5.2322526 h 0.037333 L 6.8641032,14.58427 H 9.1227739 L 12.389446,5.1389191 h 0.03733 V 14.58427 h 2.744005 V 1.2562455 H 11.045444 L 8.0961054,10.421595 H 8.058772 L 4.941433,1.2562455 Z"]').click({ force: true })
 
         //set Image
-        cy.get('select').eq(5).select("0: M17_SWex.image")
+        cy.get('select').eq(9).select("0: M17_SWex.image")
 
         //set Region: Image
-        cy.get('select').eq(6).select("Image")
+        cy.get('select').eq(10).select("Image")
 
         //set Coordinate: Channel
-        cy.get('select').eq(7).select("Channel")
+        cy.get('select').eq(11).select("Channel")
 
         //set Range
         cy.get('[class="bp3-input"]').eq(9).clear()
@@ -296,9 +298,10 @@ describe('Generate Moment map for M17_SWex.image:', () => {
 })
 
 describe('Generate Moment map for M17_SWex.hdf5:', () => {
-    it('Visits the carta demo server', () => {
-      cy.visit(demoServer)
-    //   cy.visit(localServer)
+    it('Visits the carta server(demo/local)', () => {
+    //   cy.visit(demoServer)
+      cy.viewport(800,600)
+      cy.visit(localServer)
       cy.wait(500)
     })
 
@@ -321,13 +324,13 @@ describe('Generate Moment map for M17_SWex.hdf5:', () => {
         cy.get('[d="M 0.81609227,1.2562455 V 14.58427 H 3.5600972 V 5.2322526 h 0.037333 L 6.8641032,14.58427 H 9.1227739 L 12.389446,5.1389191 h 0.03733 V 14.58427 h 2.744005 V 1.2562455 H 11.045444 L 8.0961054,10.421595 H 8.058772 L 4.941433,1.2562455 Z"]').click({ force: true })
 
         //set Image
-        cy.get('select').eq(5).select("0: M17_SWex.hdf5")
+        cy.get('select').eq(9).select("0: M17_SWex.hdf5")
 
         //set Region: Image
-        cy.get('select').eq(6).select("Image")
+        cy.get('select').eq(10).select("Image")
 
         //set Coordinate: Channel
-        cy.get('select').eq(7).select("Channel")
+        cy.get('select').eq(11).select("Channel")
 
         //set Range
         cy.get('[class="bp3-input"]').eq(9).clear()
