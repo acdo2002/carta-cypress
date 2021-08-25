@@ -1,5 +1,6 @@
 {
   "devDependencies": {
-    "cypress": "8.3.0"
+    "cypress": "8.3.0",
+    "cypress-image-snapshot": "^4.0.1"
   }
 }
